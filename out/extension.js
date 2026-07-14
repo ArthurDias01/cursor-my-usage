@@ -43,7 +43,8 @@ const vscode = __importStar(require("vscode"));
 const execFileAsync = (0, util_1.promisify)(child_process_1.execFile);
 const REFRESH_INTERVAL_MS = 180000;
 const CURSOR_USAGE_PINK = '#f778c6';
-const CURSOR_PLAN_USAGE_COMMAND = 'aiSettings.action.open.plan-usage';
+const CURSOR_SETTINGS_COMMAND = 'aiSettings.action.open';
+const CURSOR_PLAN_USAGE_TAB = 'plan-usage';
 let statusBarItem;
 let usageBarItem;
 let outputChannel;
@@ -66,7 +67,7 @@ function activate(context) {
             updateUsage(true);
         }), vscode.commands.registerCommand('cursorMyUsage.openPlanUsage', async () => {
             outputChannel.appendLine('Opening Cursor Plan & Usage settings');
-            await vscode.commands.executeCommand(CURSOR_PLAN_USAGE_COMMAND);
+            await vscode.commands.executeCommand(CURSOR_SETTINGS_COMMAND, CURSOR_PLAN_USAGE_TAB);
         }));
         updateUsage(true);
         // Auto refresh

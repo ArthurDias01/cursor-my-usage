@@ -2,7 +2,7 @@
   "name": "cursor-my-usage",
   "displayName": "My Cursor Usage",
   "description": "Track Cursor plan usage from the status bar using your local Cursor session, with one-click access to Plan & Usage settings.",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "publisher": "arthursantos01",
   "author": "Arthur Santos",
   "license": "MIT",
