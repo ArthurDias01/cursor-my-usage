@@ -1,0 +1,52 @@
+{
+  "name": "cursor-my-usage",
+  "displayName": "My Cursor Usage",
+  "description": "Track Cursor plan usage from the status bar using your local Cursor session, with one-click access to Plan & Usage settings.",
+  "version": "1.0.5",
+  "publisher": "arthursantos01",
+  "author": "Arthur Santos",
+  "license": "MIT",
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "cursor",
+    "usage",
+    "quota",
+    "plan",
+    "status bar"
+  ],
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "extensionKind": [
+    "ui"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cursorMyUsage.refresh",
+        "title": "Cursor Usage: Refresh"
+      },
+      {
+        "command": "cursorMyUsage.openPlanUsage",
+        "title": "Cursor Usage: Open Plan & Usage"
+      }
+    ]
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.0",
+    "vsce": "^2.15.0"
+  }
+}
